@@ -1,0 +1,19 @@
+//定义一个结构体，成员包括月，日，温度，适度。
+//依次次输入月，日，温度，湿度，输入一句完成的天气预报
+#include<iostream> 
+using namespace std; 
+  struct Weather {     
+  double temperatrue, humidity; 
+}; 
+struct Day {     int month, day;
+Weather weather; 
+};
+int main() { 
+    Day today;
+    cin >> today.month >> today.day         >> today.weather.temperatrue         >> today.weather.humidity;
+    cout << today.month << "月" 
+        << today.day << "日" 
+        << "温度" << today.weather.temperatrue 
+        << "湿度" << today.weather.humidity 
+        << endl;           return 0; 
+}
