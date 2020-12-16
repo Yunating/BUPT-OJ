@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+class sell//声明类 
+{ private: 
+       int Price_TV,Amount_TV;
+       int Price_Fridge,Amount_Fridge;
+       int Price_Air,Amount_Air;
+       public: 
+       void inputAmount() 
+       {               cin >> Amount_TV;
+       cin >> Amount_Fridge;
+       cin>> Amount_Air;//输入空调销售数量 
+       } 
+       void setPrice(int tv , int fridge , int air) 
+       { 
+              Price_TV = tv; 
+Price_Fridge = fridge; 
+Price_Air = air; 
+       }        
+       int getTotal() 
+       { 
+              int 	t= 	Price_TV* 	Amount_TV+ 	Price_Fridge* 
+Amount_Fridge+Price_Air*Amount_Air;
+return t;//返回销售总额 
+       } 
+}; 
+int main() 
+{     sell sales; 
+    int a=5000, b=4500, c=3000;
+    sales.setPrice(a, b, c);//调用设置价格函数 
+    sales.inputAmount();
+    cout << sales.getTotal() << endl;
+    return 0; } 
